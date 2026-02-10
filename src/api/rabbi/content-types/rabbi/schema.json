@@ -4,19 +4,25 @@
   "info": {
     "singularName": "rabbi",
     "pluralName": "rabbis",
-    "displayName": "Rabbi"
+    "displayName": "Rabbi",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "externalCatId": {
+      "type": "string",
+      "unique": true
     },
     "photo_url": {
       "type": "media",
       "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
@@ -26,6 +32,21 @@
     },
     "note": {
       "type": "blocks"
+    },
+    "categories_mains": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categories-main.categories-main",
+      "mappedBy": "rabbi"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "rabbi"
+    },
+    "Priority": {
+      "type": "integer"
     }
   }
 }

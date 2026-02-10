@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "book_categories",
+  "info": {
+    "singularName": "book-categorie",
+    "pluralName": "book-categories",
+    "displayName": "book_categorie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

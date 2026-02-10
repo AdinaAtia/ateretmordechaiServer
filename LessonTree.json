@@ -1,0 +1,2260 @@
+﻿{
+  "id": "0",
+  "parentId": "-1",
+  "name": " ארכיון",
+  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia",
+  "catId": "",
+  "children": [
+    {
+      "id": "324",
+      "parentId": "0",
+      "name": "תדמית הישיבה",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=324&Itemid=65",
+      "catId": "324",
+      "children": [
+        {
+          "id": "536",
+          "parentId": "324",
+          "name": "Dummy",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=536&Itemid=65",
+          "catId": "536",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "319",
+      "parentId": "0",
+      "name": "הרב מרדכי עטייה",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=319&Itemid=65",
+      "catId": "319",
+      "children": [
+        {
+          "id": "323",
+          "parentId": "319",
+          "name": "פנינה לשולחן שבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=323&Itemid=65",
+          "catId": "323",
+          "children": []
+        },
+        {
+          "id": "325",
+          "parentId": "319",
+          "name": "חנוכה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=325&Itemid=65",
+          "catId": "325",
+          "children": []
+        },
+        {
+          "id": "326",
+          "parentId": "319",
+          "name": "השם שפתי",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=326&Itemid=65",
+          "catId": "326",
+          "children": [
+            {
+              "id": "327",
+              "parentId": "326",
+              "name": "ברוך/אתה - כ׳׳ב אתתון",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=327&Itemid=65",
+              "catId": "327",
+              "children": []
+            },
+            {
+              "id": "328",
+              "parentId": "326",
+              "name": "ח׳ פעמים אמת",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=328&Itemid=65",
+              "catId": "328",
+              "children": []
+            },
+            {
+              "id": "342",
+              "parentId": "326",
+              "name": "קריאת שמע",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=342&Itemid=65",
+              "catId": "342",
+              "children": [
+                {
+                  "id": "343",
+                  "parentId": "342",
+                  "name": "ואהבת",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=343&Itemid=65",
+                  "catId": "343",
+                  "children": []
+                },
+                {
+                  "id": "350",
+                  "parentId": "342",
+                  "name": "והיה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=350&Itemid=65",
+                  "catId": "350",
+                  "children": []
+                },
+                {
+                  "id": "354",
+                  "parentId": "342",
+                  "name": "דביקים",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=354&Itemid=65",
+                  "catId": "354",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "329",
+          "parentId": "319",
+          "name": "כריעות וזקיפות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=329&Itemid=65",
+          "catId": "329",
+          "children": [
+            {
+              "id": "330",
+              "parentId": "329",
+              "name": "שורשי המוחין שבכתר",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=330&Itemid=65",
+              "catId": "330",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "331",
+          "parentId": "319",
+          "name": "מטבע ברכה - עיון",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=331&Itemid=65",
+          "catId": "331",
+          "children": [
+            {
+              "id": "515",
+              "parentId": "331",
+              "name": "מטבע ברכה עיון ס״ח - מסונן פ״ב",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=515&Itemid=65",
+              "catId": "515",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "349",
+          "parentId": "319",
+          "name": "פורים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=349&Itemid=65",
+          "catId": "349",
+          "children": []
+        },
+        {
+          "id": "362",
+          "parentId": "319",
+          "name": "פסח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=362&Itemid=65",
+          "catId": "362",
+          "children": []
+        },
+        {
+          "id": "368",
+          "parentId": "319",
+          "name": "שבועות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=368&Itemid=65",
+          "catId": "368",
+          "children": []
+        },
+        {
+          "id": "371",
+          "parentId": "319",
+          "name": "קדיש",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=371&Itemid=65",
+          "catId": "371",
+          "children": []
+        },
+        {
+          "id": "376",
+          "parentId": "319",
+          "name": "ראש השנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=376&Itemid=65",
+          "catId": "376",
+          "children": []
+        },
+        {
+          "id": "377",
+          "parentId": "319",
+          "name": "כיפור",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=377&Itemid=65",
+          "catId": "377",
+          "children": []
+        },
+        {
+          "id": "382",
+          "parentId": "319",
+          "name": "נענועים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=382&Itemid=65",
+          "catId": "382",
+          "children": []
+        },
+        {
+          "id": "389",
+          "parentId": "319",
+          "name": "כללי",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=389&Itemid=65",
+          "catId": "389",
+          "children": []
+        },
+        {
+          "id": "392",
+          "parentId": "319",
+          "name": "אוצרות חיים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=392&Itemid=65",
+          "catId": "392",
+          "children": []
+        },
+        {
+          "id": "399",
+          "parentId": "319",
+          "name": "קריאת שמע",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=399&Itemid=65",
+          "catId": "399",
+          "children": []
+        },
+        {
+          "id": "404",
+          "parentId": "319",
+          "name": "עמידה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=404&Itemid=65",
+          "catId": "404",
+          "children": [
+            {
+              "id": "405",
+              "parentId": "404",
+              "name": "מקיפי תפילין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=405&Itemid=65",
+              "catId": "405",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "431",
+          "parentId": "319",
+          "name": "סיכומים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=431&Itemid=65",
+          "catId": "431",
+          "children": []
+        },
+        {
+          "id": "433",
+          "parentId": "319",
+          "name": "מטבע ברכה תשע׳׳ח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=433&Itemid=65",
+          "catId": "433",
+          "children": []
+        },
+        {
+          "id": "436",
+          "parentId": "319",
+          "name": "עמידה תשע׳׳ח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=436&Itemid=65",
+          "catId": "436",
+          "children": [
+            {
+              "id": "437",
+              "parentId": "436",
+              "name": "מקיפי תפילין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=437&Itemid=65",
+              "catId": "437",
+              "children": []
+            },
+            {
+              "id": "456",
+              "parentId": "436",
+              "name": "אל עליון",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=456&Itemid=65",
+              "catId": "456",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "443",
+          "parentId": "319",
+          "name": "ספירת העומר",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=443&Itemid=65",
+          "catId": "443",
+          "children": []
+        },
+        {
+          "id": "485",
+          "parentId": "319",
+          "name": "שאר התפילה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=485&Itemid=65",
+          "catId": "485",
+          "children": []
+        },
+        {
+          "id": "526",
+          "parentId": "319",
+          "name": "תשפ״ג - תחילת התפילה - בית וגן",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=526&Itemid=65",
+          "catId": "526",
+          "children": []
+        },
+        {
+          "id": "527",
+          "parentId": "319",
+          "name": "תשפ״ג - תחילת התפילה - ישיבה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=527&Itemid=65",
+          "catId": "527",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "320",
+      "parentId": "0",
+      "name": "הרב יואל בלומנפלד",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=320&Itemid=65",
+      "catId": "320",
+      "children": [
+        {
+          "id": "338",
+          "parentId": "320",
+          "name": "סיכומים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=338&Itemid=65",
+          "catId": "338",
+          "children": []
+        },
+        {
+          "id": "339",
+          "parentId": "320",
+          "name": "סידור חול",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=339&Itemid=65",
+          "catId": "339",
+          "children": [
+            {
+              "id": "340",
+              "parentId": "339",
+              "name": "וידוי",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=340&Itemid=65",
+              "catId": "340",
+              "children": []
+            },
+            {
+              "id": "359",
+              "parentId": "339",
+              "name": "ערבית",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=359&Itemid=65",
+              "catId": "359",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "352",
+          "parentId": "320",
+          "name": "תיקון השובבים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=352&Itemid=65",
+          "catId": "352",
+          "children": []
+        },
+        {
+          "id": "367",
+          "parentId": "320",
+          "name": "דרושי הלילה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=367&Itemid=65",
+          "catId": "367",
+          "children": []
+        },
+        {
+          "id": "383",
+          "parentId": "320",
+          "name": "שמיטה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=383&Itemid=65",
+          "catId": "383",
+          "children": []
+        },
+        {
+          "id": "393",
+          "parentId": "320",
+          "name": "כוונות כלליות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=393&Itemid=65",
+          "catId": "393",
+          "children": []
+        },
+        {
+          "id": "397",
+          "parentId": "320",
+          "name": "פורים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=397&Itemid=65",
+          "catId": "397",
+          "children": []
+        },
+        {
+          "id": "398",
+          "parentId": "320",
+          "name": "פסח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=398&Itemid=65",
+          "catId": "398",
+          "children": []
+        },
+        {
+          "id": "454",
+          "parentId": "320",
+          "name": "ברכת הלבנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=454&Itemid=65",
+          "catId": "454",
+          "children": []
+        },
+        {
+          "id": "400",
+          "parentId": "320",
+          "name": "שבועות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=400&Itemid=65",
+          "catId": "400",
+          "children": []
+        },
+        {
+          "id": "401",
+          "parentId": "320",
+          "name": "ראש השנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=401&Itemid=65",
+          "catId": "401",
+          "children": []
+        },
+        {
+          "id": "402",
+          "parentId": "320",
+          "name": "יום כיפור",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=402&Itemid=65",
+          "catId": "402",
+          "children": []
+        },
+        {
+          "id": "403",
+          "parentId": "320",
+          "name": "נענועים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=403&Itemid=65",
+          "catId": "403",
+          "children": []
+        },
+        {
+          "id": "409",
+          "parentId": "320",
+          "name": "חנוכה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=409&Itemid=65",
+          "catId": "409",
+          "children": []
+        },
+        {
+          "id": "430",
+          "parentId": "320",
+          "name": "ספירת העומר",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=430&Itemid=65",
+          "catId": "430",
+          "children": []
+        },
+        {
+          "id": "441",
+          "parentId": "320",
+          "name": "תיקון חצות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=441&Itemid=65",
+          "catId": "441",
+          "children": []
+        },
+        {
+          "id": "449",
+          "parentId": "320",
+          "name": "בין המצרים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=449&Itemid=65",
+          "catId": "449",
+          "children": []
+        },
+        {
+          "id": "450",
+          "parentId": "320",
+          "name": "ראש חודש",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=450&Itemid=65",
+          "catId": "450",
+          "children": []
+        },
+        {
+          "id": "452",
+          "parentId": "320",
+          "name": "קדושה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=452&Itemid=65",
+          "catId": "452",
+          "children": []
+        },
+        {
+          "id": "457",
+          "parentId": "320",
+          "name": "שבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=457&Itemid=65",
+          "catId": "457",
+          "children": [
+            {
+              "id": "458",
+              "parentId": "457",
+              "name": "ערב שבת",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=458&Itemid=65",
+              "catId": "458",
+              "children": []
+            },
+            {
+              "id": "524",
+              "parentId": "457",
+              "name": "סעודות שבת",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=524&Itemid=65",
+              "catId": "524",
+              "children": []
+            },
+            {
+              "id": "549",
+              "parentId": "457",
+              "name": "שבת - חזרה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=549&Itemid=65",
+              "catId": "549",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "503",
+          "parentId": "320",
+          "name": "סידור חול - רחובות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=503&Itemid=65",
+          "catId": "503",
+          "children": []
+        },
+        {
+          "id": "521",
+          "parentId": "320",
+          "name": "שונות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=521&Itemid=65",
+          "catId": "521",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "321",
+      "parentId": "0",
+      "name": "הרב יהושע ביסמוט",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=321&Itemid=65",
+      "catId": "321",
+      "children": [
+        {
+          "id": "351",
+          "parentId": "321",
+          "name": "אוצרות חיים מהדורא ב׳",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=351&Itemid=65",
+          "catId": "351",
+          "children": []
+        },
+        {
+          "id": "360",
+          "parentId": "321",
+          "name": "פורים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=360&Itemid=65",
+          "catId": "360",
+          "children": []
+        },
+        {
+          "id": "361",
+          "parentId": "321",
+          "name": "מטבע ברכה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=361&Itemid=65",
+          "catId": "361",
+          "children": []
+        },
+        {
+          "id": "363",
+          "parentId": "321",
+          "name": "פסח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=363&Itemid=65",
+          "catId": "363",
+          "children": []
+        },
+        {
+          "id": "364",
+          "parentId": "321",
+          "name": "ספירת העומר",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=364&Itemid=65",
+          "catId": "364",
+          "children": []
+        },
+        {
+          "id": "365",
+          "parentId": "321",
+          "name": "שבועות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=365&Itemid=65",
+          "catId": "365",
+          "children": []
+        },
+        {
+          "id": "366",
+          "parentId": "321",
+          "name": "קדיש",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=366&Itemid=65",
+          "catId": "366",
+          "children": [
+            {
+              "id": "451",
+              "parentId": "366",
+              "name": "קדיש - יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=451&Itemid=65",
+              "catId": "451",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "370",
+          "parentId": "321",
+          "name": "שונות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=370&Itemid=65",
+          "catId": "370",
+          "children": []
+        },
+        {
+          "id": "372",
+          "parentId": "321",
+          "name": "ראש השנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=372&Itemid=65",
+          "catId": "372",
+          "children": [
+            {
+              "id": "446",
+              "parentId": "372",
+              "name": "ראש השנה-יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=446&Itemid=65",
+              "catId": "446",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "373",
+          "parentId": "321",
+          "name": "שמיטה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=373&Itemid=65",
+          "catId": "373",
+          "children": []
+        },
+        {
+          "id": "380",
+          "parentId": "321",
+          "name": "כיפור",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=380&Itemid=65",
+          "catId": "380",
+          "children": []
+        },
+        {
+          "id": "384",
+          "parentId": "321",
+          "name": "הקדמות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=384&Itemid=65",
+          "catId": "384",
+          "children": []
+        },
+        {
+          "id": "385",
+          "parentId": "321",
+          "name": "חנוכה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=385&Itemid=65",
+          "catId": "385",
+          "children": []
+        },
+        {
+          "id": "387",
+          "parentId": "321",
+          "name": "רמח׳׳ל",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=387&Itemid=65",
+          "catId": "387",
+          "children": []
+        },
+        {
+          "id": "390",
+          "parentId": "321",
+          "name": "שער הכוונות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=390&Itemid=65",
+          "catId": "390",
+          "children": []
+        },
+        {
+          "id": "391",
+          "parentId": "321",
+          "name": "סיכומים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=391&Itemid=65",
+          "catId": "391",
+          "children": []
+        },
+        {
+          "id": "412",
+          "parentId": "321",
+          "name": "שער ההקדמות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=412&Itemid=65",
+          "catId": "412",
+          "children": []
+        },
+        {
+          "id": "413",
+          "parentId": "321",
+          "name": "אוצרות חיים בעיון",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=413&Itemid=65",
+          "catId": "413",
+          "children": []
+        },
+        {
+          "id": "414",
+          "parentId": "321",
+          "name": "פרשת השבוע",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=414&Itemid=65",
+          "catId": "414",
+          "children": []
+        },
+        {
+          "id": "415",
+          "parentId": "321",
+          "name": "שערי אורה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=415&Itemid=65",
+          "catId": "415",
+          "children": []
+        },
+        {
+          "id": "416",
+          "parentId": "321",
+          "name": "הקדמות ושערים - לשם",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=416&Itemid=65",
+          "catId": "416",
+          "children": []
+        },
+        {
+          "id": "448",
+          "parentId": "321",
+          "name": "נהר שלום",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=448&Itemid=65",
+          "catId": "448",
+          "children": []
+        },
+        {
+          "id": "453",
+          "parentId": "321",
+          "name": "ראשון לציון - סידור",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=453&Itemid=65",
+          "catId": "453",
+          "children": []
+        },
+        {
+          "id": "455",
+          "parentId": "321",
+          "name": "תפילת הרש\\\"ש",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=455&Itemid=65",
+          "catId": "455",
+          "children": []
+        },
+        {
+          "id": "488",
+          "parentId": "321",
+          "name": "חזרה מהירה אוצרות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=488&Itemid=65",
+          "catId": "488",
+          "children": []
+        },
+        {
+          "id": "494",
+          "parentId": "321",
+          "name": "שערי אורה תש״פ",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=494&Itemid=65",
+          "catId": "494",
+          "children": []
+        },
+        {
+          "id": "497",
+          "parentId": "321",
+          "name": "סוכות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=497&Itemid=65",
+          "catId": "497",
+          "children": []
+        },
+        {
+          "id": "506",
+          "parentId": "321",
+          "name": "כוונות הסידור",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=506&Itemid=65",
+          "catId": "506",
+          "children": []
+        },
+        {
+          "id": "509",
+          "parentId": "321",
+          "name": "אדרא רבא",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=509&Itemid=65",
+          "catId": "509",
+          "children": []
+        },
+        {
+          "id": "519",
+          "parentId": "321",
+          "name": "אוצרות חיים תשפ״ב",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=519&Itemid=65",
+          "catId": "519",
+          "children": []
+        },
+        {
+          "id": "525",
+          "parentId": "321",
+          "name": "שבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=525&Itemid=65",
+          "catId": "525",
+          "children": []
+        },
+        {
+          "id": "530",
+          "parentId": "321",
+          "name": "הקדמות ללימוד הקבלה תשפ״ג",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=530&Itemid=65",
+          "catId": "530",
+          "children": []
+        },
+        {
+          "id": "539",
+          "parentId": "321",
+          "name": "חק לישראל",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=539&Itemid=65",
+          "catId": "539",
+          "children": []
+        },
+        {
+          "id": "540",
+          "parentId": "321",
+          "name": "כוונות האכילה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=540&Itemid=65",
+          "catId": "540",
+          "children": []
+        },
+        {
+          "id": "546",
+          "parentId": "321",
+          "name": "תשפ״ד - זוהר",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=546&Itemid=65",
+          "catId": "546",
+          "children": []
+        },
+        {
+          "id": "547",
+          "parentId": "321",
+          "name": "אוצרות בבקיאות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=547&Itemid=65",
+          "catId": "547",
+          "children": []
+        },
+        {
+          "id": "551",
+          "parentId": "321",
+          "name": "אדרא זוטא",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=551&Itemid=65",
+          "catId": "551",
+          "children": []
+        },
+        {
+          "id": "562",
+          "parentId": "321",
+          "name": "עשי״ת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=562&Itemid=65",
+          "catId": "562",
+          "children": []
+        },
+        {
+          "id": "563",
+          "parentId": "321",
+          "name": "שערי קדושה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=563&Itemid=65",
+          "catId": "563",
+          "children": []
+        },
+        {
+          "id": "630",
+          "parentId": "321",
+          "name": "ברית מילה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=630&Itemid=65",
+          "catId": "630",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "parentId": "0",
+      "name": "ר׳ יואל חקון",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=27&Itemid=65",
+      "catId": "27",
+      "children": [
+        {
+          "id": "466",
+          "parentId": "27",
+          "name": "  קבוצת: יד בנימין תשס׳׳ח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=466&Itemid=65",
+          "catId": "466",
+          "children": [
+            {
+              "id": "333",
+              "parentId": "466",
+              "name": "מטבע ברכה - יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=333&Itemid=65",
+              "catId": "333",
+              "children": []
+            },
+            {
+              "id": "336",
+              "parentId": "466",
+              "name": "סידור",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=336&Itemid=65",
+              "catId": "336",
+              "children": [
+                {
+                  "id": "347",
+                  "parentId": "336",
+                  "name": "כריעות וזקיפות",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=347&Itemid=65",
+                  "catId": "347",
+                  "children": []
+                },
+                {
+                  "id": "394",
+                  "parentId": "336",
+                  "name": "קריאת שמע - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=394&Itemid=65",
+                  "catId": "394",
+                  "children": []
+                },
+                {
+                  "id": "411",
+                  "parentId": "336",
+                  "name": "עמידה - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=411&Itemid=65",
+                  "catId": "411",
+                  "children": []
+                },
+                {
+                  "id": "473",
+                  "parentId": "336",
+                  "name": "חזרה ק׳׳ש ועמידה - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=473&Itemid=65",
+                  "catId": "473",
+                  "children": []
+                },
+                {
+                  "id": "507",
+                  "parentId": "336",
+                  "name": "חזרה עם באתי לגני - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=507&Itemid=65",
+                  "catId": "507",
+                  "children": []
+                },
+                {
+                  "id": "590",
+                  "parentId": "336",
+                  "name": "תפילה - נקודות הכסף - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=590&Itemid=65",
+                  "catId": "590",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "332",
+              "parentId": "466",
+              "name": "הקדמות כלליות",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=332&Itemid=65",
+              "catId": "332",
+              "children": [
+                {
+                  "id": "334",
+                  "parentId": "332",
+                  "name": "כל צמ׳׳א",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=334&Itemid=65",
+                  "catId": "334",
+                  "children": []
+                },
+                {
+                  "id": "346",
+                  "parentId": "332",
+                  "name": "היכלות",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=346&Itemid=65",
+                  "catId": "346",
+                  "children": []
+                },
+                {
+                  "id": "348",
+                  "parentId": "332",
+                  "name": "ראש השנה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=348&Itemid=65",
+                  "catId": "348",
+                  "children": []
+                },
+                {
+                  "id": "341",
+                  "parentId": "332",
+                  "name": "פסח",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=341&Itemid=65",
+                  "catId": "341",
+                  "children": []
+                },
+                {
+                  "id": "356",
+                  "parentId": "332",
+                  "name": "פורים",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=356&Itemid=65",
+                  "catId": "356",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "467",
+              "parentId": "466",
+              "name": "חגים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=467&Itemid=65",
+              "catId": "467",
+              "children": [
+                {
+                  "id": "468",
+                  "parentId": "467",
+                  "name": "פסח - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=468&Itemid=65",
+                  "catId": "468",
+                  "children": [
+                    {
+                      "id": "344",
+                      "parentId": "468",
+                      "name": "הגדה - יד בנימין",
+                      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=344&Itemid=65",
+                      "catId": "344",
+                      "children": []
+                    },
+                    {
+                      "id": "429",
+                      "parentId": "468",
+                      "name": "ערבית ליל פסח - יד בנימין",
+                      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=429&Itemid=65",
+                      "catId": "429",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "355",
+                  "parentId": "467",
+                  "name": "פורים - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=355&Itemid=65",
+                  "catId": "355",
+                  "children": []
+                },
+                {
+                  "id": "358",
+                  "parentId": "467",
+                  "name": "ספירת העומר - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=358&Itemid=65",
+                  "catId": "358",
+                  "children": []
+                },
+                {
+                  "id": "369",
+                  "parentId": "467",
+                  "name": "שבועות - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=369&Itemid=65",
+                  "catId": "369",
+                  "children": []
+                },
+                {
+                  "id": "374",
+                  "parentId": "467",
+                  "name": "ראש השנה - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=374&Itemid=65",
+                  "catId": "374",
+                  "children": []
+                },
+                {
+                  "id": "381",
+                  "parentId": "467",
+                  "name": "נענועים - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=381&Itemid=65",
+                  "catId": "381",
+                  "children": []
+                },
+                {
+                  "id": "386",
+                  "parentId": "467",
+                  "name": "חנוכה - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=386&Itemid=65",
+                  "catId": "386",
+                  "children": []
+                },
+                {
+                  "id": "420",
+                  "parentId": "467",
+                  "name": "כיפור - יד בנימין",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=420&Itemid=65",
+                  "catId": "420",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "378",
+              "parentId": "466",
+              "name": "סעודה - יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=378&Itemid=65",
+              "catId": "378",
+              "children": []
+            },
+            {
+              "id": "379",
+              "parentId": "466",
+              "name": "יחוד הוו׳׳ין - יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=379&Itemid=65",
+              "catId": "379",
+              "children": []
+            },
+            {
+              "id": "502",
+              "parentId": "466",
+              "name": "כוונות שונות - יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=502&Itemid=65",
+              "catId": "502",
+              "children": []
+            },
+            {
+              "id": "541",
+              "parentId": "466",
+              "name": "יחודים / כוונות הסעודה - יד בנימין",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=541&Itemid=65",
+              "catId": "541",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "419",
+          "parentId": "27",
+          "name": "  קבוצת: מבוא חורון תשע׳׳ו",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=419&Itemid=65",
+          "catId": "419",
+          "children": [
+            {
+              "id": "427",
+              "parentId": "419",
+              "name": "מטבע ברכה - מבוא חורון",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=427&Itemid=65",
+              "catId": "427",
+              "children": []
+            },
+            {
+              "id": "465",
+              "parentId": "419",
+              "name": "חגים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=465&Itemid=65",
+              "catId": "465",
+              "children": [
+                {
+                  "id": "435",
+                  "parentId": "465",
+                  "name": "חנוכה - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=435&Itemid=65",
+                  "catId": "435",
+                  "children": []
+                },
+                {
+                  "id": "462",
+                  "parentId": "465",
+                  "name": "ספירת העומר - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=462&Itemid=65",
+                  "catId": "462",
+                  "children": []
+                },
+                {
+                  "id": "464",
+                  "parentId": "465",
+                  "name": "פסח - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=464&Itemid=65",
+                  "catId": "464",
+                  "children": [
+                    {
+                      "id": "460",
+                      "parentId": "464",
+                      "name": "הגדה - מבוא חורון",
+                      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=460&Itemid=65",
+                      "catId": "460",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "428",
+                  "parentId": "465",
+                  "name": "פורים - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=428&Itemid=65",
+                  "catId": "428",
+                  "children": []
+                },
+                {
+                  "id": "472",
+                  "parentId": "465",
+                  "name": "שבועות - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=472&Itemid=65",
+                  "catId": "472",
+                  "children": []
+                },
+                {
+                  "id": "478",
+                  "parentId": "465",
+                  "name": "נענועים - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=478&Itemid=65",
+                  "catId": "478",
+                  "children": []
+                },
+                {
+                  "id": "557",
+                  "parentId": "465",
+                  "name": "ראש השנה - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=557&Itemid=65",
+                  "catId": "557",
+                  "children": []
+                },
+                {
+                  "id": "561",
+                  "parentId": "465",
+                  "name": "עשי״ת - מבוא חורון",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=561&Itemid=65",
+                  "catId": "561",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "474",
+              "parentId": "419",
+              "name": "סידור - מבוא חורון",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=474&Itemid=65",
+              "catId": "474",
+              "children": []
+            },
+            {
+              "id": "496",
+              "parentId": "419",
+              "name": "יחודים / כוונות הסעודה - מבוא חורון",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=496&Itemid=65",
+              "catId": "496",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "481",
+          "parentId": "27",
+          "name": "  קבוצת: בית וגן תש״פ",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=481&Itemid=65",
+          "catId": "481",
+          "children": [
+            {
+              "id": "482",
+              "parentId": "481",
+              "name": "הקדמות - בית וגן",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=482&Itemid=65",
+              "catId": "482",
+              "children": []
+            },
+            {
+              "id": "483",
+              "parentId": "481",
+              "name": "חגים וימים נוראים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=483&Itemid=65",
+              "catId": "483",
+              "children": [
+                {
+                  "id": "484",
+                  "parentId": "483",
+                  "name": "חנוכה - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=484&Itemid=65",
+                  "catId": "484",
+                  "children": []
+                },
+                {
+                  "id": "487",
+                  "parentId": "483",
+                  "name": "ספירת העומר - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=487&Itemid=65",
+                  "catId": "487",
+                  "children": []
+                },
+                {
+                  "id": "490",
+                  "parentId": "483",
+                  "name": "שבועות - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=490&Itemid=65",
+                  "catId": "490",
+                  "children": []
+                },
+                {
+                  "id": "493",
+                  "parentId": "483",
+                  "name": "ראש השנה - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=493&Itemid=65",
+                  "catId": "493",
+                  "children": [
+                    {
+                      "id": "520",
+                      "parentId": "493",
+                      "name": "רי״ו - בית וגן",
+                      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=520&Itemid=65",
+                      "catId": "520",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "498",
+                  "parentId": "483",
+                  "name": "סוכות - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=498&Itemid=65",
+                  "catId": "498",
+                  "children": []
+                },
+                {
+                  "id": "513",
+                  "parentId": "483",
+                  "name": "עשי״ת - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=513&Itemid=65",
+                  "catId": "513",
+                  "children": []
+                },
+                {
+                  "id": "523",
+                  "parentId": "483",
+                  "name": "כיפור - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=523&Itemid=65",
+                  "catId": "523",
+                  "children": []
+                },
+                {
+                  "id": "568",
+                  "parentId": "483",
+                  "name": "פורים - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=568&Itemid=65",
+                  "catId": "568",
+                  "children": []
+                },
+                {
+                  "id": "572",
+                  "parentId": "483",
+                  "name": "הגדה של פסח - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=572&Itemid=65",
+                  "catId": "572",
+                  "children": []
+                },
+                {
+                  "id": "581",
+                  "parentId": "483",
+                  "name": "ערבית של ליל פסח - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=581&Itemid=65",
+                  "catId": "581",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "489",
+              "parentId": "481",
+              "name": "מטבע ברכה - בית וגן",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=489&Itemid=65",
+              "catId": "489",
+              "children": []
+            },
+            {
+              "id": "499",
+              "parentId": "481",
+              "name": "כוונות הסעודה - בית וגן",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=499&Itemid=65",
+              "catId": "499",
+              "children": []
+            },
+            {
+              "id": "500",
+              "parentId": "481",
+              "name": "כוונות התפילה - בית וגן",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=500&Itemid=65",
+              "catId": "500",
+              "children": [
+                {
+                  "id": "501",
+                  "parentId": "500",
+                  "name": "קריאת שמע ועמידה - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=501&Itemid=65",
+                  "catId": "501",
+                  "children": []
+                },
+                {
+                  "id": "597",
+                  "parentId": "500",
+                  "name": "תפילה תשפ״ה - בית וגן",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=597&Itemid=65",
+                  "catId": "597",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "545",
+              "parentId": "481",
+              "name": "יחודים / כוונות הסעודה - בית וגן",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=545&Itemid=65",
+              "catId": "545",
+              "children": []
+            },
+            {
+              "id": "548",
+              "parentId": "481",
+              "name": "מטבע ברכה תשפ״ד - בית וגן",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=548&Itemid=65",
+              "catId": "548",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "479",
+          "parentId": "27",
+          "name": "  קבוצת: ישיבה תש״פ",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=479&Itemid=65",
+          "catId": "479",
+          "children": [
+            {
+              "id": "480",
+              "parentId": "479",
+              "name": "הקדמה - ישיבה תש״פ",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=480&Itemid=65",
+              "catId": "480",
+              "children": []
+            },
+            {
+              "id": "486",
+              "parentId": "479",
+              "name": "מטבע ברכה - ישיבה תש״פ",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=486&Itemid=65",
+              "catId": "486",
+              "children": []
+            },
+            {
+              "id": "491",
+              "parentId": "479",
+              "name": "חגים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=491&Itemid=65",
+              "catId": "491",
+              "children": [
+                {
+                  "id": "492",
+                  "parentId": "491",
+                  "name": "שבועות - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=492&Itemid=65",
+                  "catId": "492",
+                  "children": []
+                },
+                {
+                  "id": "504",
+                  "parentId": "491",
+                  "name": "חנוכה - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=504&Itemid=65",
+                  "catId": "504",
+                  "children": []
+                },
+                {
+                  "id": "514",
+                  "parentId": "491",
+                  "name": "פסח - הגדה - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=514&Itemid=65",
+                  "catId": "514",
+                  "children": []
+                },
+                {
+                  "id": "517",
+                  "parentId": "491",
+                  "name": "ספירת העומר - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=517&Itemid=65",
+                  "catId": "517",
+                  "children": []
+                },
+                {
+                  "id": "522",
+                  "parentId": "491",
+                  "name": "ראש השנה - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=522&Itemid=65",
+                  "catId": "522",
+                  "children": []
+                },
+                {
+                  "id": "542",
+                  "parentId": "491",
+                  "name": "נענועים - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=542&Itemid=65",
+                  "catId": "542",
+                  "children": []
+                },
+                {
+                  "id": "578",
+                  "parentId": "491",
+                  "name": "פורים - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=578&Itemid=65",
+                  "catId": "578",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "495",
+              "parentId": "479",
+              "name": "שונות",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=495&Itemid=65",
+              "catId": "495",
+              "children": []
+            },
+            {
+              "id": "510",
+              "parentId": "479",
+              "name": "סידור",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=510&Itemid=65",
+              "catId": "510",
+              "children": [
+                {
+                  "id": "511",
+                  "parentId": "510",
+                  "name": "קריאת שמע - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=511&Itemid=65",
+                  "catId": "511",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "518",
+              "parentId": "479",
+              "name": "מטבע ברכה תשפ״ב - ישיבה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=518&Itemid=65",
+              "catId": "518",
+              "children": []
+            },
+            {
+              "id": "598",
+              "parentId": "479",
+              "name": "כוונות הסעודה - ישיבה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=598&Itemid=65",
+              "catId": "598",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "531",
+          "parentId": "27",
+          "name": " קבוצת: בית וגן - אוהל משה תשפ״ג",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=531&Itemid=65",
+          "catId": "531",
+          "children": [
+            {
+              "id": "532",
+              "parentId": "531",
+              "name": "חגים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=532&Itemid=65",
+              "catId": "532",
+              "children": [
+                {
+                  "id": "533",
+                  "parentId": "532",
+                  "name": "הגדה של פסח - אוהל משה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=533&Itemid=65",
+                  "catId": "533",
+                  "children": []
+                },
+                {
+                  "id": "534",
+                  "parentId": "532",
+                  "name": "ספירת העומר - אוהל משה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=534&Itemid=65",
+                  "catId": "534",
+                  "children": []
+                },
+                {
+                  "id": "535",
+                  "parentId": "532",
+                  "name": "שבועות - אוהל משה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=535&Itemid=65",
+                  "catId": "535",
+                  "children": []
+                },
+                {
+                  "id": "537",
+                  "parentId": "532",
+                  "name": "ראש השנה - אוהל משה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=537&Itemid=65",
+                  "catId": "537",
+                  "children": [
+                    {
+                      "id": "538",
+                      "parentId": "537",
+                      "name": "רי״ו - אוהל משה",
+                      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=538&Itemid=65",
+                      "catId": "538",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "543",
+              "parentId": "531",
+              "name": "סידור",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=543&Itemid=65",
+              "catId": "543",
+              "children": [
+                {
+                  "id": "544",
+                  "parentId": "543",
+                  "name": "תשפ״ד - ק״ש - בו״ג אוהל משה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=544&Itemid=65",
+                  "catId": "544",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "512",
+          "parentId": "27",
+          "name": "שיעורים עקרונים - לפני מיון",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=512&Itemid=65",
+          "catId": "512",
+          "children": []
+        },
+        {
+          "id": "335",
+          "parentId": "27",
+          "name": "שונות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=335&Itemid=65",
+          "catId": "335",
+          "children": []
+        },
+        {
+          "id": "337",
+          "parentId": "27",
+          "name": "סיכומים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=337&Itemid=65",
+          "catId": "337",
+          "children": []
+        },
+        {
+          "id": "375",
+          "parentId": "27",
+          "name": "קבוצת:(סגור) ישיבה תשע׳׳ד",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=375&Itemid=65",
+          "catId": "375",
+          "children": [
+            {
+              "id": "406",
+              "parentId": "375",
+              "name": "אטב׳׳ח",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=406&Itemid=65",
+              "catId": "406",
+              "children": []
+            },
+            {
+              "id": "432",
+              "parentId": "375",
+              "name": "קדיש - ישיבה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=432&Itemid=65",
+              "catId": "432",
+              "children": []
+            },
+            {
+              "id": "438",
+              "parentId": "375",
+              "name": "מטבע ברכה תשע׳׳ח - ישיבה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=438&Itemid=65",
+              "catId": "438",
+              "children": []
+            },
+            {
+              "id": "442",
+              "parentId": "375",
+              "name": "חגים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=442&Itemid=65",
+              "catId": "442",
+              "children": [
+                {
+                  "id": "444",
+                  "parentId": "442",
+                  "name": "ספירת העומר - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=444&Itemid=65",
+                  "catId": "444",
+                  "children": []
+                },
+                {
+                  "id": "459",
+                  "parentId": "442",
+                  "name": "פסח - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=459&Itemid=65",
+                  "catId": "459",
+                  "children": []
+                },
+                {
+                  "id": "461",
+                  "parentId": "442",
+                  "name": "שבועות - ישיבה",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=461&Itemid=65",
+                  "catId": "461",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "445",
+              "parentId": "375",
+              "name": "ק׳׳ש ועמידה - ישיבה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=445&Itemid=65",
+              "catId": "445",
+              "children": []
+            },
+            {
+              "id": "476",
+              "parentId": "375",
+              "name": "ראש השנה - ישיבה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=476&Itemid=65",
+              "catId": "476",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "395",
+          "parentId": "27",
+          "name": "קבוצת: (סגור) ישמח לב תשע׳׳ה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=395&Itemid=65",
+          "catId": "395",
+          "children": [
+            {
+              "id": "396",
+              "parentId": "395",
+              "name": "הקדמות לכוונות",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=396&Itemid=65",
+              "catId": "396",
+              "children": []
+            },
+            {
+              "id": "410",
+              "parentId": "395",
+              "name": "מטבע ברכה - ישמח לב",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=410&Itemid=65",
+              "catId": "410",
+              "children": []
+            },
+            {
+              "id": "469",
+              "parentId": "395",
+              "name": "חגים",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=469&Itemid=65",
+              "catId": "469",
+              "children": [
+                {
+                  "id": "471",
+                  "parentId": "469",
+                  "name": "פסח - ישמח לב",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=471&Itemid=65",
+                  "catId": "471",
+                  "children": [
+                    {
+                      "id": "345",
+                      "parentId": "471",
+                      "name": "ערבית ליל פסח - ישמח לב",
+                      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=345&Itemid=65",
+                      "catId": "345",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "353",
+                  "parentId": "469",
+                  "name": "פורים - ישמח לב",
+                  "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=353&Itemid=65",
+                  "catId": "353",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "417",
+          "parentId": "27",
+          "name": "קבוצת: (סגור) נתניה תשע׳׳ו",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=417&Itemid=65",
+          "catId": "417",
+          "children": [
+            {
+              "id": "426",
+              "parentId": "417",
+              "name": "מטבע ברכה - נתניה",
+              "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=426&Itemid=65",
+              "catId": "426",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "434",
+          "parentId": "27",
+          "name": "קבוצת: (סגור) קרני שומרון תשע׳׳ח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=434&Itemid=65",
+          "catId": "434",
+          "children": []
+        },
+        {
+          "id": "475",
+          "parentId": "27",
+          "name": "קבוצת: (סגור) ישיבה (סידור) תשע׳׳ט",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=475&Itemid=65",
+          "catId": "475",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "408",
+      "parentId": "0",
+      "name": "הרב בניהו עטייה",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=408&Itemid=65",
+      "catId": "408",
+      "children": [
+        {
+          "id": "407",
+          "parentId": "408",
+          "name": "שונות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=407&Itemid=65",
+          "catId": "407",
+          "children": []
+        },
+        {
+          "id": "439",
+          "parentId": "408",
+          "name": "מטבע ברכה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=439&Itemid=65",
+          "catId": "439",
+          "children": []
+        },
+        {
+          "id": "477",
+          "parentId": "408",
+          "name": "ראש השנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=477&Itemid=65",
+          "catId": "477",
+          "children": []
+        },
+        {
+          "id": "505",
+          "parentId": "408",
+          "name": "מבוא שערים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=505&Itemid=65",
+          "catId": "505",
+          "children": []
+        },
+        {
+          "id": "508",
+          "parentId": "408",
+          "name": "קריאת שמע",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=508&Itemid=65",
+          "catId": "508",
+          "children": []
+        },
+        {
+          "id": "516",
+          "parentId": "408",
+          "name": "אוצרות חיים עיון",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=516&Itemid=65",
+          "catId": "516",
+          "children": []
+        },
+        {
+          "id": "529",
+          "parentId": "408",
+          "name": "אוצרות חיים בעיון - נווה יעקב",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=529&Itemid=65",
+          "catId": "529",
+          "children": []
+        },
+        {
+          "id": "595",
+          "parentId": "408",
+          "name": "קדיש",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=595&Itemid=65",
+          "catId": "595",
+          "children": []
+        },
+        {
+          "id": "599",
+          "parentId": "408",
+          "name": "קבלת שבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=599&Itemid=65",
+          "catId": "599",
+          "children": []
+        },
+        {
+          "id": "621",
+          "parentId": "408",
+          "name": "יעקב ולאה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=621&Itemid=65",
+          "catId": "621",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "423",
+      "parentId": "0",
+      "name": "הרב יהושע ביבי",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=423&Itemid=65",
+      "catId": "423",
+      "children": [
+        {
+          "id": "424",
+          "parentId": "423",
+          "name": "אוצרות חיים בעיון",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=424&Itemid=65",
+          "catId": "424",
+          "children": []
+        },
+        {
+          "id": "425",
+          "parentId": "423",
+          "name": "אוצרות חיים בפשט",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=425&Itemid=65",
+          "catId": "425",
+          "children": []
+        },
+        {
+          "id": "550",
+          "parentId": "423",
+          "name": "מבוא ופתיחה לחכמת הקבלה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=550&Itemid=65",
+          "catId": "550",
+          "children": []
+        },
+        {
+          "id": "552",
+          "parentId": "423",
+          "name": "אוצרות חיים מחזור ג",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=552&Itemid=65",
+          "catId": "552",
+          "children": []
+        },
+        {
+          "id": "554",
+          "parentId": "423",
+          "name": "סליחות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=554&Itemid=65",
+          "catId": "554",
+          "children": []
+        },
+        {
+          "id": "555",
+          "parentId": "423",
+          "name": "ראש השנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=555&Itemid=65",
+          "catId": "555",
+          "children": []
+        },
+        {
+          "id": "556",
+          "parentId": "423",
+          "name": "עשרת ימי תשובה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=556&Itemid=65",
+          "catId": "556",
+          "children": []
+        },
+        {
+          "id": "558",
+          "parentId": "423",
+          "name": "סוכות ונענועים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=558&Itemid=65",
+          "catId": "558",
+          "children": []
+        },
+        {
+          "id": "559",
+          "parentId": "423",
+          "name": "כיפור",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=559&Itemid=65",
+          "catId": "559",
+          "children": []
+        },
+        {
+          "id": "560",
+          "parentId": "423",
+          "name": "שובבים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=560&Itemid=65",
+          "catId": "560",
+          "children": []
+        },
+        {
+          "id": "565",
+          "parentId": "423",
+          "name": "חנוכה - שלהבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=565&Itemid=65",
+          "catId": "565",
+          "children": []
+        },
+        {
+          "id": "566",
+          "parentId": "423",
+          "name": "חנוכה - ברכות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=566&Itemid=65",
+          "catId": "566",
+          "children": []
+        },
+        {
+          "id": "567",
+          "parentId": "423",
+          "name": "טו בשבט",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=567&Itemid=65",
+          "catId": "567",
+          "children": []
+        },
+        {
+          "id": "569",
+          "parentId": "423",
+          "name": "כוונת עניית אמן",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=569&Itemid=65",
+          "catId": "569",
+          "children": []
+        },
+        {
+          "id": "570",
+          "parentId": "423",
+          "name": "כוונות מאה ברכות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=570&Itemid=65",
+          "catId": "570",
+          "children": []
+        },
+        {
+          "id": "571",
+          "parentId": "423",
+          "name": "כוונות בשתיקה כשאין מעשה, ומעשה בלי כוונה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=571&Itemid=65",
+          "catId": "571",
+          "children": []
+        },
+        {
+          "id": "573",
+          "parentId": "423",
+          "name": "קריאת שמע ",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=573&Itemid=65",
+          "catId": "573",
+          "children": []
+        },
+        {
+          "id": "576",
+          "parentId": "423",
+          "name": "פורים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=576&Itemid=65",
+          "catId": "576",
+          "children": []
+        },
+        {
+          "id": "580",
+          "parentId": "423",
+          "name": "פסח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=580&Itemid=65",
+          "catId": "580",
+          "children": []
+        },
+        {
+          "id": "582",
+          "parentId": "423",
+          "name": "ספירת העומר",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=582&Itemid=65",
+          "catId": "582",
+          "children": []
+        },
+        {
+          "id": "585",
+          "parentId": "423",
+          "name": "שבת - עליית העולמות וקבלת שבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=585&Itemid=65",
+          "catId": "585",
+          "children": []
+        },
+        {
+          "id": "586",
+          "parentId": "423",
+          "name": "שבת - עליית עולם הבריאה במזמור שיר ליום השבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=586&Itemid=65",
+          "catId": "586",
+          "children": []
+        },
+        {
+          "id": "587",
+          "parentId": "423",
+          "name": "שבת - עלית התפילות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=587&Itemid=65",
+          "catId": "587",
+          "children": []
+        },
+        {
+          "id": "588",
+          "parentId": "423",
+          "name": "ל\\\"ג בעומר",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=588&Itemid=65",
+          "catId": "588",
+          "children": []
+        },
+        {
+          "id": "589",
+          "parentId": "423",
+          "name": "שבת - הארות לימי החול",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=589&Itemid=65",
+          "catId": "589",
+          "children": []
+        },
+        {
+          "id": "591",
+          "parentId": "423",
+          "name": "עליית ז\\\"ת דעשיה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=591&Itemid=65",
+          "catId": "591",
+          "children": []
+        },
+        {
+          "id": "592",
+          "parentId": "423",
+          "name": "שבת - עליית ז\\\"ת דעשיה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=592&Itemid=65",
+          "catId": "592",
+          "children": []
+        },
+        {
+          "id": "593",
+          "parentId": "423",
+          "name": "שבועות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=593&Itemid=65",
+          "catId": "593",
+          "children": []
+        },
+        {
+          "id": "594",
+          "parentId": "423",
+          "name": "שבת - הפרשים בין תפילות חול לשבת",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=594&Itemid=65",
+          "catId": "594",
+          "children": []
+        },
+        {
+          "id": "596",
+          "parentId": "423",
+          "name": "אטב\\\"ח",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=596&Itemid=65",
+          "catId": "596",
+          "children": []
+        },
+        {
+          "id": "600",
+          "parentId": "423",
+          "name": "סוגיות בענין סוד עצימת העינים, ובעולימתא שפירתא דלית לה עיינין",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=600&Itemid=65",
+          "catId": "600",
+          "children": []
+        },
+        {
+          "id": "602",
+          "parentId": "423",
+          "name": "כוונות העמידה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=602&Itemid=65",
+          "catId": "602",
+          "children": []
+        },
+        {
+          "id": "607",
+          "parentId": "423",
+          "name": "כוונות העמידה - דרוש ב",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=607&Itemid=65",
+          "catId": "607",
+          "children": []
+        },
+        {
+          "id": "616",
+          "parentId": "423",
+          "name": "כוונות העמידה - דרוש ב - ברוך",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=616&Itemid=65",
+          "catId": "616",
+          "children": []
+        },
+        {
+          "id": "627",
+          "parentId": "423",
+          "name": "תשפ\\\"ה - ראש השנה",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=627&Itemid=65",
+          "catId": "627",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "322",
+      "parentId": "0",
+      "name": "שיעורים כלליים",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=322&Itemid=65",
+      "catId": "322",
+      "children": [
+        {
+          "id": "388",
+          "parentId": "322",
+          "name": "מצגות",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=388&Itemid=65",
+          "catId": "388",
+          "children": []
+        },
+        {
+          "id": "421",
+          "parentId": "322",
+          "name": "אוצרות חיים",
+          "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=421&Itemid=65",
+          "catId": "421",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "564",
+      "parentId": "0",
+      "name": "חנוכה",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=564&Itemid=65",
+      "catId": "564",
+      "children": []
+    },
+    {
+      "id": "577",
+      "parentId": "0",
+      "name": "פורים",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=577&Itemid=65",
+      "catId": "577",
+      "children": []
+    },
+    {
+      "id": "579",
+      "parentId": "0",
+      "name": "פסח",
+      "url": "ארכיון-שיעורים?option=com_jmultimedia&view=jmultimedia&catid=579&Itemid=65",
+      "catId": "579",
+      "children": []
+    }
+  ]
+}

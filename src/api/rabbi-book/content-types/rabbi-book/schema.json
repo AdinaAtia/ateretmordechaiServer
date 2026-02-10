@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rabbi_books",
+  "info": {
+    "singularName": "rabbi-book",
+    "pluralName": "rabbi-books",
+    "displayName": "rabbi_book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "book_name": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "rabbi": {
+      "type": "string"
+    },
+    "book_categorie": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::book-categorie.book-categorie"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

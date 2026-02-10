@@ -1,34 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface ApiRabbiRabbi extends Struct.CollectionTypeSchema {
-  collectionName: 'rabbis';
-  info: {
-    singularName: 'rabbi';
-    pluralName: 'rabbis';
-    displayName: 'Rabbi';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Schema.Attribute.String;
-    photo_url: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    note: Schema.Attribute.Blocks;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::rabbi.rabbi'>;
-  };
-}
-
 export interface PluginUploadFile extends Struct.CollectionTypeSchema {
   collectionName: 'files';
   info: {
@@ -514,6 +485,265 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiBookCategorieBookCategorie
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'book_categories';
+  info: {
+    singularName: 'book-categorie';
+    pluralName: 'book-categories';
+    displayName: 'book_categorie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::book-categorie.book-categorie'
+    >;
+  };
+}
+
+export interface ApiCategoriesMainCategoriesMain
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'categories_mains';
+  info: {
+    singularName: 'categories-main';
+    pluralName: 'categories-mains';
+    displayName: 'Categories_Main';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    externalCatId: Schema.Attribute.String & Schema.Attribute.Unique;
+    subs: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categories-sub.categories-sub'
+    >;
+    lessons: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
+    rabbi: Schema.Attribute.Relation<'manyToOne', 'api::rabbi.rabbi'>;
+    Priority: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categories-main.categories-main'
+    >;
+  };
+}
+
+export interface ApiCategoriesSubCategoriesSub
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'categories_subs';
+  info: {
+    singularName: 'categories-sub';
+    pluralName: 'categories-subs';
+    displayName: 'Categories_Sub';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    externalCatId: Schema.Attribute.String & Schema.Attribute.Unique;
+    main_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::categories-main.categories-main'
+    >;
+    lessons: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
+    parent_sub: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::categories-sub.categories-sub'
+    >;
+    child_subs: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categories-sub.categories-sub'
+    >;
+    Priority: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categories-sub.categories-sub'
+    >;
+  };
+}
+
+export interface ApiLessonLesson extends Struct.CollectionTypeSchema {
+  collectionName: 'lessons';
+  info: {
+    singularName: 'lesson';
+    pluralName: 'lessons';
+    displayName: 'Lesson';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    lesson_date_gregorian: Schema.Attribute.Date;
+    lesson_date_hebrew: Schema.Attribute.String;
+    duration: Schema.Attribute.String;
+    youtube_id: Schema.Attribute.Text;
+    main_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::categories-main.categories-main'
+    >;
+    sub_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::categories-sub.categories-sub'
+    >;
+    rabbi: Schema.Attribute.Relation<'manyToOne', 'api::rabbi.rabbi'>;
+    location: Schema.Attribute.Relation<'oneToOne', 'api::location.location'>;
+    views: Schema.Attribute.Integer;
+    AudioDir: Schema.Attribute.Text;
+    AudioFileName: Schema.Attribute.Text;
+    PdfFileName: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
+  };
+}
+
+export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
+  collectionName: 'locations';
+  info: {
+    singularName: 'location';
+    pluralName: 'locations';
+    displayName: 'Location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    address: Schema.Attribute.String;
+    notes: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::location.location'
+    >;
+  };
+}
+
+export interface ApiRabbiRabbi extends Struct.CollectionTypeSchema {
+  collectionName: 'rabbis';
+  info: {
+    singularName: 'rabbi';
+    pluralName: 'rabbis';
+    displayName: 'Rabbi';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    externalCatId: Schema.Attribute.String & Schema.Attribute.Unique;
+    photo_url: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    note: Schema.Attribute.Blocks;
+    categories_mains: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::categories-main.categories-main'
+    >;
+    lessons: Schema.Attribute.Relation<'oneToMany', 'api::lesson.lesson'>;
+    Priority: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::rabbi.rabbi'>;
+  };
+}
+
+export interface ApiRabbiBookRabbiBook extends Struct.CollectionTypeSchema {
+  collectionName: 'rabbi_books';
+  info: {
+    singularName: 'rabbi-book';
+    pluralName: 'rabbi-books';
+    displayName: 'rabbi_book';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    book_name: Schema.Attribute.Text;
+    price: Schema.Attribute.Integer;
+    rabbi: Schema.Attribute.String;
+    book_categorie: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::book-categorie.book-categorie'
+    >;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::rabbi-book.rabbi-book'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -879,7 +1109,6 @@ export interface AdminTransferTokenPermission
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
-      'api::rabbi.rabbi': ApiRabbiRabbi;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
@@ -890,6 +1119,13 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::book-categorie.book-categorie': ApiBookCategorieBookCategorie;
+      'api::categories-main.categories-main': ApiCategoriesMainCategoriesMain;
+      'api::categories-sub.categories-sub': ApiCategoriesSubCategoriesSub;
+      'api::lesson.lesson': ApiLessonLesson;
+      'api::location.location': ApiLocationLocation;
+      'api::rabbi.rabbi': ApiRabbiRabbi;
+      'api::rabbi-book.rabbi-book': ApiRabbiBookRabbiBook;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
