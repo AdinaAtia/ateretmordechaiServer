@@ -1755,7 +1755,8 @@ export default factories.createCoreController('api::lesson.lesson', ({ strapi })
 
                 let foundRabbiId = null;
                 for (const r of allRabbis) {
-                    const baseName = r.name.replace('הרב', '').trim();
+                    // שמות הרבנים במסד כוללים סיומת כמו שליט"א — מחפשים בכותרת בלעדיה
+                    const baseName = r.name.replace(/\s*שליט.{0,2}א\s*$/, '').replace('הרב', '').trim();
                     if (rawTitle.includes(baseName)) { foundRabbiId = r.id; break; }
                 }
 
