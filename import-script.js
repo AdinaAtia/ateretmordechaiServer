@@ -1,4 +1,4 @@
-// const fs = require('fs');
+﻿// const fs = require('fs');
 
 // async function importFinalCleanStructure() {
 //   try {
@@ -742,32 +742,32 @@
 // 'use strict';
 // const fs = require('fs');
 // const path = require('path');
-
+// 
 // module.exports = async ({ strapi }) => {
 //   try {
 //     console.log("🚀 מתחיל ייבוא מותאם ל-Strapi v5 (סטטוס: Published)...");
-
+// 
 //     const filePath = path.join(process.cwd(), 'LessonTree.json');
 //     let rawContent = fs.readFileSync(filePath, 'utf8');
 //     let cleanContent = rawContent.replace(/\uFEFF/g, '').trim();
 //     const data = JSON.parse(cleanContent);
 //     const rootItems = data.children || (Array.isArray(data) ? data : [data]);
-
+// 
 //     // פונקציית עזר לביצוע Upsert ופרסום (Publish)
 //     async function upsertCategory(uid, item, relations, priority) {
 //       const externalId = item.id.toString();
-      
+//       
 //       const existing = await strapi.db.query(uid).findOne({
 //         where: { externalCatId: externalId }
 //       });
-
+// 
 //       const dataPayload = {
 //         name: item.name.trim(),
 //         externalCatId: externalId,
 //         priority: priority, // מעדכן את סדר העדיפות
 //         ...relations
 //       };
-
+// 
 //       if (existing) {
 //         console.log(`🔄 מעדכן ומפרסם: ${item.name}`);
 //         const updated = await strapi.documents(uid).update({
@@ -785,16 +785,16 @@
 //         return created.documentId;
 //       }
 //     }
-
+// 
 //     async function runImport(items, type, mainDocId, rabbiDocId, parentSubDocId) {
 //       if (!items || !Array.isArray(items)) return;
-
+// 
 //       for (let i = 0; i < items.length; i++) {
 //         const item = items[i];
 //         if (!item.name || item.name.trim() === "Dummy") continue;
-
+// 
 //         const uid = type === 'main' ? 'api::categories-main.categories-main' : 'api::categories-sub.categories-sub';
-        
+//         
 //         const relations = {};
 //         if (type === 'main') {
 //           if (rabbiDocId) relations.rabbi = rabbiDocId;
@@ -802,10 +802,10 @@
 //           if (mainDocId) relations.main_category = mainDocId;
 //           if (parentSubDocId) relations.parent_sub = parentSubDocId;
 //         }
-
+// 
 //         // שליחת ה-Index כ-Priority (כדי לשמור על הסדר)
 //         const currentDocId = await upsertCategory(uid, item, relations, i + 1);
-
+// 
 //         if (item.children && item.children.length > 0) {
 //           await runImport(
 //             item.children, 
@@ -817,16 +817,16 @@
 //         }
 //       }
 //     }
-
+// 
 //     for (let i = 0; i < rootItems.length; i++) {
 //       const item = rootItems[i];
 //       const itemName = item.name?.trim();
 //       if (!itemName || itemName === "Dummy") continue;
-
+// 
 //       const rabbi = await strapi.db.query('api::rabbi.rabbi').findOne({
 //         where: { externalCatId: item.id.toString() }
 //       });
-
+// 
 //       if (rabbi) {
 //         console.log(`👨‍🏫 מטפל ברב: ${rabbi.name}`);
 //         await runImport(item.children, 'main', null, rabbi.documentId, null);
@@ -834,7 +834,7 @@
 //         await runImport([item], 'main', null, null, null);
 //       }
 //     }
-
+// 
 //     console.log("✨ הסקריפט הסתיים! כל הרשומות במצב Published.");
 //   } catch (err) {
 //     console.error("❌ שגיאה בתהליך:", err.message);
@@ -1300,6 +1300,11 @@
 
 //     console.log(`📝 מעבד ${lessonsData.length} שיעורים...`);
 
+//     let insertedCount = 0;
+//     const skipped = { noAudioNoYoutube: [], audioNotFound: [], otherError: [] };
+
+//     const allRabbis = await strapi.db.query('api::rabbi.rabbi').findMany();
+
 //     // --- הפונקציה שהופכת את החיפוש לחכם ---
 //     const cleanMatch = (name) => {
 //       if (!name) return "";
@@ -1342,17 +1347,24 @@
 //           if (mainCat) mainCatId = mainCat.id;
 //         }
 
+//         if (!item.mp3Directory && !item.mp3FileName && !item.youTubeId) {
+//           skipped.noAudioNoYoutube.push(`${item.lessonName} (ID: ${item.lessonId})`);
+//           continue;
+//         }
+
+
 //         const lessonPayload = {
 //           title: item.lessonName,
 //           duration: item.lessonDuration,
 //           youtube_id: item.youTubeId || "",
 //           views: parseInt(item.views) || 0,
-//           AudioDir: item.mp3Directory,
+//           AudioDir: (item.mp3Directory || "").replace('/public.php/dav/files/KX3W8YjnDgHpoA9', ''),
 //           AudioFileName: item.mp3FileName,
 //           PdfFileName: item.pdfFileName,
 //           lesson_date_hebrew: hebrewDate,
 //           lesson_date_gregorian: gregorianDate,
 //           publishedAt: new Date(),
+//           _skipAudioCheck: true,
 //         };
 
 //         // --- הצמדת רב חכמה ---
@@ -1360,8 +1372,7 @@
 //           const searchName = cleanMatch(item.rabi); // מנקה את השם מה-JSON
 
 //           // מחפש רב שגם השם שלו ב-Strapi עובר ניקוי דומה
-//           const allRabbis = await strapi.db.query('api::rabbi.rabbi').findMany();
-//           const foundRabbi = allRabbis.find(r => cleanMatch(r.name).includes(searchName) || 
+//           const foundRabbi = allRabbis.find(r => cleanMatch(r.name).includes(searchName) ||
 //                                                  searchName.includes(cleanMatch(r.name)));
 
 //           if (foundRabbi) {
@@ -1375,14 +1386,817 @@
 //         await strapi.entityService.create('api::lesson.lesson', {
 //           data: lessonPayload
 //         });
+//         insertedCount++;
+
+//       } catch (err) {
+//         if (err.message && err.message.includes('קובץ האודיו לא נמצא')) {
+//           skipped.audioNotFound.push(`${item.lessonName} (ID: ${item.lessonId})`);
+//         } else {
+//           skipped.otherError.push(`${item.lessonName} (ID: ${item.lessonId}): ${err.message}`);
+//         }
+//       }
+//     }
+
+//     console.log(`\n🏁 הייבוא הסתיים!`);
+//     console.log(`✅ נכנסו: ${insertedCount} שיעורים`);
+//     console.log(`⚠️ דולגו — אין אודיו ואין יוטיוב: ${skipped.noAudioNoYoutube.length}`);
+//     skipped.noAudioNoYoutube.forEach(s => console.log(`   - ${s}`));
+//     console.log(`❌ דולגו — קובץ אודיו לא נמצא בשרת: ${skipped.audioNotFound.length}`);
+//     skipped.audioNotFound.forEach(s => console.log(`   - ${s}`));
+//     if (skipped.otherError.length > 0) {
+//       console.log(`❌ שגיאות אחרות: ${skipped.otherError.length}`);
+//       skipped.otherError.forEach(s => console.log(`   - ${s}`));
+//     }
+//   } catch (error) {
+//     console.error("💥 שגיאה קריטית:", error.message);
+//   }
+// };
+// מושך 15 אחרונים בצורה נכונה!!!
+// import { factories } from '@strapi/strapi';
+// import axios from 'axios';
+// import { parseStringPromise } from 'xml2js';
+// import hebcal from 'hebcal';
+
+// const RSS_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCjCwvHzEeN0dGO4eaaQi6KQ';
+
+// // פונקציית עזר להפיכת אורך סרטון לפורמט קריא
+// const formatDuration = (pt) => {
+//     if (!pt) return "00:00";
+//     const match = pt.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+//     if (!match) return "00:00";
+//     const h = parseInt(match[1] || 0);
+//     const m = parseInt(match[2] || 0);
+//     const s = parseInt(match[3] || 0);
+//     return h > 0 
+//         ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` 
+//         : `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+// };
+
+// export default factories.createCoreController('api::lesson.lesson', ({ strapi }) => ({
+//     async sync(ctx) {
+//         try {
+//            
+
+//             // 1. משיכת הנתונים מיוטיוב
+//             let rssResponse = await axios.get(RSS_URL, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+//             const rssResult = await parseStringPromise(rssResponse.data);
+//             const entries = rssResult.feed.entry || [];
+//             const videoIds = entries.map(e => e['yt:videoId'][0]);
+
+//             // 2. משיכת פרטים נוספים (משך השיעור) מה-API
+//             const videoDetailsRes = await axios.get(
+//                 `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoIds.join(',')}&key=${YOUTUBE_API_KEY}`
+//             );
+            
+//             let videoDetailsMap = {};
+//             videoDetailsRes.data.items.forEach(item => {
+//                 videoDetailsMap[item.id] = item.contentDetails.duration;
+//             });
+
+//             // 3. טעינת רבנים מהמערכת
+//             const allRabbis = await strapi.documents('api::rabbi.rabbi').findMany();
+//             let addedCount = 0;
+//             let skippedCount = 0;
+
+//             for (const entry of entries) {
+//                 const videoId = entry['yt:videoId'][0];
+//                 const rawTitle = entry.title[0];
+
+//                 // בדיקה אם קיים
+//                 const existing = await strapi.documents('api::lesson.lesson').findMany({
+//                     filters: { youtube_id: videoId }
+//                 });
+
+//                 if (existing.length === 0) {
+//                     const duration = videoDetailsMap[videoId] ? formatDuration(videoDetailsMap[videoId]) : "00:00";
+//                     const publishedDate = entry.published[0];
+//                     const hDate = new hebcal.HDate(new Date(publishedDate));
+
+//                     // --- ניקוי שם הרב מהכותרת ---
+//                     let cleanTitle = rawTitle;
+//                     let foundRabbiName = "לא זוהה";
+//                     let foundRabbiId = null;
+
+//                     for (const r of allRabbis) {
+//                         const baseName = r.name.replace('הרב', '').trim();
+//                         if (rawTitle.includes(baseName)) {
+//                             foundRabbiId = r.id;
+//                             foundRabbiName = r.name;
+//                             const nameRegex = new RegExp(`(הרב\\s+)?${baseName}`, 'g');
+//                             cleanTitle = cleanTitle.replace(nameRegex, '');
+//                             break; 
+//                         }
+//                     }
+//                     cleanTitle = cleanTitle.replace(/^[\s\-\|.:]+/, '').trim();
+
+//                     // --- חילוץ צפיות ---
+//                     let rssViews = 0;
+//                     try {
+//                         rssViews = parseInt(entry['media:group'][0]['media:community'][0]['media:statistics'][0].$.views || 0);
+//                     } catch (e) { rssViews = 0; }
+
+//                     // שמירה ל-Strapi
+//                     await strapi.documents('api::lesson.lesson').create({
+//                         data: {
+//                             title: cleanTitle,
+//                             youtube_id: videoId,
+//                             duration: duration,
+//                             views: rssViews,
+//                             lesson_date_gregorian: publishedDate.split('T')[0],
+//                             lesson_date_hebrew: hDate.toString('h'),
+//                             rabbi: foundRabbiId,
+//                             locale: 'en',
+//                             publishedAt: new Date(),
+//                         },
+//                         status: 'published',
+//                     });
+
+//                     // הדפסת עדכון מפורט ללוג
+//                     console.log(`✅ הוסף בהצלחה:`);
+//                     console.log(`   🔹 כותרת מקורית: ${rawTitle}`);
+//                     console.log(`   🔹 כותרת נקייה:  ${cleanTitle}`);
+//                     console.log(`   🔹 רב משויך:     ${foundRabbiName}`);
+//                     console.log(`   🔹 משך שיעור:    ${duration} | צפיות: ${rssViews}`);
+//                     console.log(`   🔹 תאריך עברי:   ${hDate.toString('h')}`);
+//                     console.log('   ----------------------------------------------');
+                    
+//                     addedCount++;
+//                 } else {
+//                     skippedCount++;
+//                 }
+//             }
+
+//             console.log(`📊 סיכום: נוספו ${addedCount} שיעורים חדשים. (${skippedCount} כבר היו קיימים).`);
+//             console.log('--------------------------------------------------');
+
+//             return { 
+//                 success: true, 
+//                 added: addedCount, 
+//                 skipped: skippedCount 
+//             };
+
+//         } catch (err) {
+//             console.error('❌ שגיאה במהלך הסנכרון:', err.message);
+//             return ctx.badRequest(err.message);
+//         }
+//     },
+// }));
+// import { factories } from '@strapi/strapi';
+// import axios from 'axios';
+// import { parseStringPromise } from 'xml2js';
+// import hebcal from 'hebcal';
+
+// const RSS_URL = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCjCwvHzEeN0dGO4eaaQi6KQ';
+
+// // פונקציית עזר להפיכת אורך סרטון לפורמט קריא
+// const formatDuration = (pt) => {
+//     if (!pt) return "00:00";
+//     const match = pt.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+//     if (!match) return "00:00";
+//     const h = parseInt(match[1] || 0);
+//     const m = parseInt(match[2] || 0);
+//     const s = parseInt(match[3] || 0);
+//     return h > 0 
+//         ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}` 
+//         : `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+// };
+
+// export default factories.createCoreController('api::lesson.lesson', ({ strapi }) => ({
+//     async sync(ctx) {
+//         try {
+//             // 1. משיכת הנתונים מיוטיוב
+//             let rssResponse = await axios.get(RSS_URL, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+//             const rssResult = await parseStringPromise(rssResponse.data);
+//             const entries = rssResult.feed.entry || [];
+//             const videoIds = entries.map(e => e['yt:videoId'][0]);
+
+//             // 2. משיכת פרטים נוספים (משך השיעור) מה-API
+//             const videoDetailsRes = await axios.get(
+//                 `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoIds.join(',')}&key=${YOUTUBE_API_KEY}`
+//             );
+            
+//             let videoDetailsMap = {};
+//             videoDetailsRes.data.items.forEach(item => {
+//                 videoDetailsMap[item.id] = item.contentDetails.duration;
+//             });
+
+//             // 3. טעינת רבנים מהמערכת
+//             const allRabbis = await strapi.documents('api::rabbi.rabbi').findMany();
+//             let addedCount = 0;
+//             let skippedCount = 0;
+
+//             for (const entry of entries) {
+//                 const videoId = entry['yt:videoId'][0];
+//                 const rawTitle = entry.title[0];
+
+//                 // בדיקה אם קיים
+//                 const existing = await strapi.documents('api::lesson.lesson').findMany({
+//                     filters: { youtube_id: videoId }
+//                 });
+
+//                 if (existing.length === 0) {
+//                     const duration = videoDetailsMap[videoId] ? formatDuration(videoDetailsMap[videoId]) : "00:00";
+//                     const publishedDate = entry.published[0];
+//                     const hDate = new hebcal.HDate(new Date(publishedDate));
+
+//                     // --- ניקוי שם הרב מהכותרת ---
+//                     let cleanTitle = rawTitle;
+//                     let foundRabbiName = "לא זוהה";
+//                     let foundRabbiId = null;
+
+//                     for (const r of allRabbis) {
+//                         const baseName = r.name.replace('הרב', '').trim();
+//                         if (rawTitle.includes(baseName)) {
+//                             foundRabbiId = r.id;
+//                             foundRabbiName = r.name;
+//                             const nameRegex = new RegExp(`(הרב\\s+)?${baseName}`, 'g');
+//                             cleanTitle = cleanTitle.replace(nameRegex, '');
+//                             break; 
+//                         }
+//                     }
+//                     cleanTitle = cleanTitle.replace(/^[\s\-\|.:]+/, '').trim();
+
+//                     // --- חילוץ צפיות ---
+//                     let rssViews = 0;
+//                     try {
+//                         rssViews = parseInt(entry['media:group'][0]['media:community'][0]['media:statistics'][0].$.views || 0);
+//                     } catch (e) { rssViews = 0; }
+
+//                     // שמירה ל-Strapi
+//                     await strapi.documents('api::lesson.lesson').create({
+//                         data: {
+//                             title: cleanTitle,
+//                             youtube_id: videoId,
+//                             duration: duration,
+//                             views: rssViews,
+//                             lesson_date_gregorian: publishedDate.split('T')[0],
+//                             lesson_date_hebrew: hDate.toString('h'),
+//                             rabbi: foundRabbiId,
+//                             locale: 'en',
+//                             publishedAt: new Date(),
+//                         },
+//                         status: 'published',
+//                     });
+
+//                     // הדפסת עדכון מפורט ללוג
+//                     console.log(`✅ הוסף בהצלחה:`);
+//                     console.log(`   🔹 כותרת מקורית: ${rawTitle}`);
+//                     console.log(`   🔹 כותרת נקייה:  ${cleanTitle}`);
+//                     console.log(`   🔹 רב משויך:     ${foundRabbiName}`);
+//                     console.log(`   🔹 משך שיעור:    ${duration} | צפיות: ${rssViews}`);
+//                     console.log(`   🔹 תאריך עברי:   ${hDate.toString('h')}`);
+//                     console.log('   ----------------------------------------------');
+                    
+//                     addedCount++;
+//                 } else {
+//                     skippedCount++;
+//                 }
+//             }
+
+//             console.log(`📊 סיכום: נוספו ${addedCount} שיעורים חדשים. (${skippedCount} כבר היו קיימים).`);
+//             console.log('--------------------------------------------------');
+
+//             return { 
+//                 success: true, 
+//                 added: addedCount, 
+//                 skipped: skippedCount 
+//             };
+
+//         } catch (err) {
+//             console.error('❌ שגיאה במהלך הסנכרון:', err.message);
+//             return ctx.badRequest(err.message);
+//         }
+//     },
+// }));
+
+// 'use strict';
+// const axios = require('axios');
+// const hebcal = require('hebcal');
+
+// const CHANNEL_ID = 'UCjCwvHzEeN0dGO4eaaQi6KQ';
+// const UPLOADS_PLAYLIST_ID = CHANNEL_ID.replace('UC', 'UU');
+
+// const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// const formatDuration = (pt) => {
+//     if (!pt) return "00:00";
+//     const match = pt.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+//     if (!match) return "00:00";
+//     const h = parseInt(match[1] || 0);
+//     const m = parseInt(match[2] || 0);
+//     const s = parseInt(match[3] || 0);
+//     return h > 0
+//         ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+//         : `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+// };
+
+// module.exports = async ({ strapi }) => {
+//     const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
+//     if (!YOUTUBE_API_KEY) {
+//         console.error('❌ YOUTUBE_API_KEY חסר ב-.env');
+//         return;
+//     }
+
+//     try {
+//         // מציאת הרב מרדכי עטייה במסד הנתונים
+//         const allRabbis = await strapi.db.query('api::rabbi.rabbi').findMany();
+//         const rabbi = allRabbis.find(r => {
+//             const clean = r.name.replace(/יי/g, 'י');
+//             return clean.includes('מרדכי') && clean.includes('עטי');
+//         });
+
+//         if (!rabbi) {
+//             console.error('❌ הרב מרדכי עטייה לא נמצא במסד הנתונים');
+//             console.log('רבנים קיימים:', allRabbis.map(r => r.name).join(', '));
+//             return;
+//         }
+
+//         console.log(`✅ נמצא: ${rabbi.name} (ID: ${rabbi.id})`);
+
+//         // שלב 0: מחיקת השיעורים השגויים שנוספו בריצה הקודמת (lesson_date_hebrew ריק)
+//         console.log('🧹 מנקה שיעורים שגויים מהריצה הקודמת...');
+//         const knex = strapi.db.connection;
+//         const wrongRows = await knex('lessons AS l')
+//             .join('lessons_rabbi_lnk AS lrl', 'l.id', 'lrl.lesson_id')
+//             .where('lrl.rabbi_id', rabbi.id)
+//             .where(function () {
+//                 this.where('l.lesson_date_hebrew', '').orWhereNull('l.lesson_date_hebrew');
+//             })
+//             .select('l.document_id');
+
+//         for (const row of wrongRows) {
+//             await strapi.documents('api::lesson.lesson').delete({ documentId: row.document_id });
+//         }
+//         console.log(`🗑️ נמחקו ${wrongRows.length} שיעורים שגויים`);
+
+//         // שלב 1: משיכת כל הסרטונים מהערוץ עם pagination מלא
+//         console.log('🚀 מתחיל משיכת כל הסרטונים מהערוץ...');
+//         let allItems = [];
+//         let nextPageToken = '';
+//         let pageCount = 0;
+
+//         do {
+//             pageCount++;
+//             console.log(`📄 עמוד ${pageCount} - ${allItems.length} סרטונים עד כה...`);
+
+//             const res = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
+//                 params: {
+//                     part: 'snippet,contentDetails',
+//                     playlistId: UPLOADS_PLAYLIST_ID,
+//                     maxResults: 50,
+//                     pageToken: nextPageToken,
+//                     key: YOUTUBE_API_KEY
+//                 }
+//             });
+
+//             allItems = allItems.concat(res.data.items || []);
+//             nextPageToken = res.data.nextPageToken || '';
+//             await sleep(300);
+//         } while (nextPageToken);
+
+//         console.log(`📊 סה"כ ${allItems.length} סרטונים בערוץ`);
+
+//         // שלב 2: סינון - רק שיעורים שבכותרת יש "מרדכי" + "עטי" (שתי הכתיבות)
+//         const rabbiVideos = allItems.filter(item => {
+//             const title = (item.snippet.title || '').replace(/יי/g, 'י');
+//             return title.includes('מרדכי') && title.includes('עטי');
+//         });
+
+//         console.log(`🔍 נמצאו ${rabbiVideos.length} שיעורים של ${rabbi.name}`);
+//         if (rabbiVideos.length === 0) {
+//             console.log('⚠️ לא נמצאו שיעורים - בדוק את אופן כתיבת השם בכותרות יוטיוב');
+//             return;
+//         }
+
+//         // שלב 3: משיכת משך זמן + צפיות בנגלות של 50 (כמו בקונטרולר)
+//         const videoIds = rabbiVideos.map(i => i.contentDetails.videoId);
+//         const detailsMap = {};
+
+//         for (let i = 0; i < videoIds.length; i += 50) {
+//             const batch = videoIds.slice(i, i + 50);
+//             const detailsRes = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
+//                 params: {
+//                     part: 'contentDetails,statistics',
+//                     id: batch.join(','),
+//                     key: YOUTUBE_API_KEY
+//                 }
+//             });
+
+//             detailsRes.data.items.forEach(v => {
+//                 detailsMap[v.id] = {
+//                     duration: formatDuration(v.contentDetails.duration),
+//                     views: parseInt(v.statistics.viewCount || 0)
+//                 };
+//             });
+
+//             await sleep(300);
+//         }
+
+//         // שלב 4: הכנסה למסד הנתונים - אותה לוגיקה בדיוק כמו בקונטרולר
+//         let addedCount = 0;
+//         let skippedCount = 0;
+
+//         for (const item of rabbiVideos) {
+//             const videoId = item.contentDetails.videoId;
+//             const rawTitle = item.snippet.title;
+//             const publishedDate = item.snippet.publishedAt;
+
+//             const existing = await strapi.documents('api::lesson.lesson').findMany({
+//                 filters: { youtube_id: videoId }
+//             });
+
+//             if (existing.length > 0) {
+//                 skippedCount++;
+//                 continue;
+//             }
+
+//             try {
+//                 const hDate = new hebcal.HDate(new Date(publishedDate));
+
+//                 await strapi.documents('api::lesson.lesson').create({
+//                     data: {
+//                         title: rawTitle,
+//                         youtube_id: videoId,
+//                         duration: detailsMap[videoId]?.duration || "00:00",
+//                         views: detailsMap[videoId]?.views || 0,
+//                         lesson_date_gregorian: publishedDate.split('T')[0],
+//                         lesson_date_hebrew: hDate.toString('h'),
+//                         rabbi: rabbi.id,
+//                         locale: 'en',
+//                         publishedAt: new Date(),
+//                     },
+//                     status: 'published',
+//                 });
+
+//                 addedCount++;
+//                 if (addedCount % 10 === 0 || addedCount <= 5) {
+//                     console.log(`✅ [${addedCount}] ${rawTitle}`);
+//                 }
+//             } catch (err) {
+//                 console.error(`❌ שגיאה ב-"${rawTitle}": ${err.message}`);
+//             }
+//         }
+
+//         console.log('');
+//         console.log('🏁 הסתיים!');
+//         console.log(`✅ נוספו: ${addedCount} שיעורים חדשים`);
+//         console.log(`⏩ כבר קיימים: ${skippedCount} שיעורים`);
+
+//     } catch (err) {
+//         console.error('💥 שגיאה קריטית:', err.message);
+//         if (err.response?.data) {
+//             console.error('פרטי שגיאה מגוגל:', JSON.stringify(err.response.data, null, 2));
+//         }
+//     }
+
+// 'use strict';
+// const fs = require('fs');
+// const path = require('path');
+
+// module.exports = async ({ strapi }) => {
+//   try {
+//     console.log("🚀 מתחיל ייבוא חכם (פתרון לעטיה/חקון)...");
+
+//     const filePath = path.join(process.cwd(), 'LessonList.json');
+//     if (!fs.existsSync(filePath)) {
+//       console.error("💥 קובץ LessonList.json לא נמצא!");
+//       return;
+//     }
+
+//     const rawContent = fs.readFileSync(filePath, 'utf8')
+//       .replace(/^﻿/g, '')
+//       .replace(/[ --]/g, "")
+//       .trim();
+
+//     const lessonsData = JSON.parse(rawContent);
+
+//     console.log("🧹 מנקה שיעורים קיימים...");
+//     await strapi.db.query('api::lesson.lesson').deleteMany({});
+
+//     console.log(`📝 מעבד ${lessonsData.length} שיעורים...`);
+
+//     const cleanMatch = (name) => {
+//       if (!name) return "";
+//       return name
+//         .replace(/הרב|ר'|הרה"ג|מרן|אדמו"ר/g, "")
+//         .replace(/יי/g, 'י')
+//         .replace(/\s+/g, " ")
+//         .trim();
+//     };
+
+//     let insertedCount = 0;
+//     let skippedCount = 0;
+//     const skipReasons = {};
+
+//     for (const item of lessonsData) {
+//       try {
+//         let mainCatId = null;
+//         let subCatId = null;
+//         let hebrewDate = "";
+//         let gregorianDate = null;
+
+//         if (item.lessonDateTime) {
+//           const dateMatch = item.lessonDateTime.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+//           if (dateMatch) {
+//             gregorianDate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+//             hebrewDate = item.lessonDateTime.split(dateMatch[0])[0].trim();
+//           } else {
+//             hebrewDate = item.lessonDateTime;
+//           }
+//         }
+
+//         const subCat = await strapi.db.query('api::categories-sub.categories-sub').findOne({
+//           where: { externalCatId: item.catId.toString() },
+//           populate: ['main_category']
+//         });
+
+//         if (subCat) {
+//           subCatId = subCat.id;
+//           mainCatId = subCat.main_category?.id || null;
+//         } else {
+//           const mainCat = await strapi.db.query('api::categories-main.categories-main').findOne({
+//             where: { externalCatId: item.catId.toString() }
+//           });
+//           if (mainCat) mainCatId = mainCat.id;
+//         }
+
+//         const lessonPayload = {
+//           title: item.lessonName,
+//           duration: item.lessonDuration,
+//           youtube_id: item.youTubeId || "",
+//           views: parseInt(item.views) || 0,
+//           AudioDir: (item.mp3Directory || "").replace('/public.php/dav/files/KX3W8YjnDgHpoA9', ''),
+//           AudioFileName: item.mp3FileName,
+//           PdfFileName: item.pdfFileName,
+//           lesson_date_hebrew: hebrewDate,
+//           lesson_date_gregorian: gregorianDate,
+//           publishedAt: new Date(),
+//         };
+
+//         if (item.rabi) {
+//           const searchName = cleanMatch(item.rabi);
+//           const allRabbis = await strapi.db.query('api::rabbi.rabbi').findMany();
+//           const foundRabbi = allRabbis.find(r => cleanMatch(r.name).includes(searchName) ||
+//                                                  searchName.includes(cleanMatch(r.name)));
+//           if (foundRabbi) {
+//             lessonPayload.rabbi = foundRabbi.id;
+//           }
+//         }
+
+//         if (mainCatId) lessonPayload.main_category = mainCatId;
+//         if (subCatId) lessonPayload.sub_category = subCatId;
+
+//         // ולידציה — בדיקת שדות חובה לפני הכנסה
+//         const missing = [];
+//         if (!lessonPayload.title) missing.push('כותרת');
+//         if (!lessonPayload.lesson_date_gregorian) missing.push('תאריך');
+//         if (!lessonPayload.rabbi) missing.push('רב');
+//         if (!lessonPayload.main_category && !lessonPayload.sub_category) missing.push('קטגוריה');
+//         if (item.views === undefined || item.views === null) missing.push('צפיות');
+
+//         if (missing.length > 0) {
+//           console.warn(`⚠️ דולג: "${item.lessonName}" — חסר: ${missing.join(' | ')}`);
+//           skippedCount++;
+//           missing.forEach(r => { skipReasons[r] = (skipReasons[r] || 0) + 1; });
+//           continue;
+//         }
+
+//         await strapi.entityService.create('api::lesson.lesson', {
+//           data: lessonPayload
+//         });
+
+//         insertedCount++;
 
 //       } catch (err) {
 //         console.error(`❌ כשל בשיעור ${item.lessonId}: ${err.message}`);
 //       }
 //     }
 
-//     console.log("🏁 הייבוא הסתיים בהצלחה! הכל מחובר.");
+//     console.log(`🏁 הייבוא הסתיים! נכנסו: ${insertedCount} שיעורים.`);
+//     if (skippedCount > 0) {
+//       console.log(`⚠️ סה"כ דולגו: ${skippedCount} שיעורים`);
+//       Object.entries(skipReasons).forEach(([reason, count]) => {
+//         console.log(`   - חסר ${reason}: ${count} שיעורים`);
+//       });
+//     }
+
 //   } catch (error) {
 //     console.error("💥 שגיאה קריטית:", error.message);
+//   }
+// };
+
+// ייבוא 29 קטגוריות חסרות — הסתיים בהצלחה, מושבת
+
+// const fs = require('fs');
+// const path = require('path');
+
+// module.exports = async ({ strapi }) => {
+//   try {
+//     console.log("🚀 מתחיל ייבוא חכם (פתרון לעטיה/חקון)...");
+
+//     const filePath = path.join(process.cwd(), 'LessonList.json');
+//     if (!fs.existsSync(filePath)) {
+//       console.error("💥 קובץ LessonList.json לא נמצא!");
+//       return;
+//     }
+
+//     const rawContent = fs.readFileSync(filePath, 'utf8')
+//       .replace(/^﻿/g, '')
+//       .replace(/[ --]/g, "")
+//       .trim();
+
+//     const lessonsData = JSON.parse(rawContent);
+
+//     console.log("🧹 מנקה שיעורים קיימים...");
+//     await strapi.db.query('api::lesson.lesson').deleteMany({});
+
+//     console.log(`📝 מעבד ${lessonsData.length} שיעורים...`);
+
+//     const cleanMatch = (name) => {
+//       if (!name) return "";
+//       return name
+//         .replace(/הרב|ר'|הרה"ג|מרן|אדמו"ר/g, "")
+//         .replace(/יי/g, 'י')
+//         .replace(/\s+/g, " ")
+//         .trim();
+//     };
+
+//     let insertedCount = 0;
+//     let skippedCount = 0;
+//     const skipReasons = {};
+
+//     for (const item of lessonsData) {
+//       try {
+//         let mainCatId = null;
+//         let subCatId = null;
+//         let hebrewDate = "";
+//         let gregorianDate = null;
+
+//         if (item.lessonDateTime) {
+//           const dateMatch = item.lessonDateTime.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+//           if (dateMatch) {
+//             gregorianDate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+//             hebrewDate = item.lessonDateTime.split(dateMatch[0])[0].trim();
+//           } else {
+//             hebrewDate = item.lessonDateTime;
+//           }
+//         }
+
+//         const subCat = await strapi.db.query('api::categories-sub.categories-sub').findOne({
+//           where: { externalCatId: item.catId.toString() },
+//           populate: ['main_category']
+//         });
+
+//         if (subCat) {
+//           subCatId = subCat.id;
+//           mainCatId = subCat.main_category?.id || null;
+//         } else {
+//           const mainCat = await strapi.db.query('api::categories-main.categories-main').findOne({
+//             where: { externalCatId: item.catId.toString() }
+//           });
+//           if (mainCat) mainCatId = mainCat.id;
+//         }
+
+//         const lessonPayload = {
+//           title: item.lessonName,
+//           duration: item.lessonDuration,
+//           youtube_id: item.youTubeId || "",
+//           views: parseInt(item.views) || 0,
+//           AudioDir: (item.mp3Directory || "").replace('/public.php/dav/files/KX3W8YjnDgHpoA9', ''),
+//           AudioFileName: item.mp3FileName,
+//           PdfFileName: item.pdfFileName,
+//           lesson_date_hebrew: hebrewDate,
+//           lesson_date_gregorian: gregorianDate,
+//           publishedAt: new Date(),
+//         };
+
+//         if (item.rabi) {
+//           const searchName = cleanMatch(item.rabi);
+//           const allRabbis = await strapi.db.query('api::rabbi.rabbi').findMany();
+//           const foundRabbi = allRabbis.find(r => cleanMatch(r.name).includes(searchName) ||
+//                                                  searchName.includes(cleanMatch(r.name)));
+//           if (foundRabbi) lessonPayload.rabbi = foundRabbi.id;
+//         }
+
+//         if (mainCatId) lessonPayload.main_category = mainCatId;
+//         if (subCatId) lessonPayload.sub_category = subCatId;
+
+//         const missing = [];
+//         if (!lessonPayload.title) missing.push('כותרת');
+//         if (!lessonPayload.lesson_date_gregorian) missing.push('תאריך');
+//         if (!lessonPayload.rabbi) missing.push('רב');
+//         if (!lessonPayload.main_category && !lessonPayload.sub_category) missing.push('קטגוריה');
+//         if (item.views === undefined || item.views === null) missing.push('צפיות');
+
+//         if (missing.length > 0) {
+//           console.warn(`⚠️ דולג: "${item.lessonName}" — חסר: ${missing.join(' | ')}`);
+//           skippedCount++;
+//           missing.forEach(r => { skipReasons[r] = (skipReasons[r] || 0) + 1; });
+//           continue;
+//         }
+
+//         await strapi.entityService.create('api::lesson.lesson', {
+//           data: lessonPayload
+//         });
+
+//         insertedCount++;
+
+//       } catch (err) {
+//         console.error(`❌ כשל בשיעור ${item.lessonId}: ${err.message}`);
+//       }
+//     }
+
+//     console.log(`🏁 הייבוא הסתיים! נכנסו: ${insertedCount} שיעורים.`);
+//     if (skippedCount > 0) {
+//       console.log(`⚠️ סה"כ דולגו: ${skippedCount} שיעורים`);
+//       Object.entries(skipReasons).forEach(([reason, count]) => {
+//         console.log(`   - חסר ${reason}: ${count} שיעורים`);
+//       });
+//     }
+
+//   } catch (error) {
+//     console.error("💥 שגיאה קריטית:", error.message);
+//   }
+// };
+
+// const fs = require('fs');
+// const path = require('path');
+
+// module.exports = async ({ strapi }) => {
+//   try {
+//     console.log("Starting import...");
+//     const filePath = path.join(process.cwd(), 'LessonList.json');
+//     if (!fs.existsSync(filePath)) { console.error("LessonList.json not found!"); return; }
+//     const rawContent = fs.readFileSync(filePath, 'utf8').replace(/^﻿/, '').trim();
+//     const lessonsData = JSON.parse(rawContent);
+//     console.log("Clearing existing lessons...");
+//     await strapi.db.query('api::lesson.lesson').deleteMany({});
+//     console.log(`Processing ${lessonsData.length} lessons...`);
+//     let insertedCount = 0;
+//     const skipped = { noMedia: [], otherError: [] };
+//     const allRabbis = await strapi.db.query('api::rabbi.rabbi').findMany();
+//     const allSubCats = await strapi.db.query('api::categories-sub.categories-sub').findMany({ populate: ['main_category'] });
+//     const subCatMap = new Map(allSubCats.map(s => [s.externalCatId, s]));
+//     const allMainCats = await strapi.db.query('api::categories-main.categories-main').findMany();
+//     const mainCatMap = new Map(allMainCats.map(m => [m.externalCatId, m]));
+//     global._isImporting = true;
+//     const cleanMatch = (name) => {
+//       if (!name) return "";
+//       return name.replace(/[הרב]|ר'/g, "").replace(/יי/g, 'י').replace(/\s+/g, " ").trim();
+//     };
+//     for (const item of lessonsData) {
+//       try {
+//         if (!item.mp3Directory && !item.mp3FileName && !item.youTubeId) {
+//           skipped.noMedia.push(`${item.lessonName} (ID: ${item.lessonId})`);
+//           continue;
+//         }
+//         let hebrewDate = "", gregorianDate = null;
+//         if (item.lessonDateTime) {
+//           const dateMatch = item.lessonDateTime.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+//           if (dateMatch) {
+//             gregorianDate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+//             hebrewDate = item.lessonDateTime.split(dateMatch[0])[0].trim();
+//           } else { hebrewDate = item.lessonDateTime; }
+//         }
+//         let mainCatId = null, subCatId = null;
+//         const subCat = subCatMap.get(item.catId.toString());
+//         if (subCat) { subCatId = subCat.id; mainCatId = subCat.main_category?.id || null; }
+//         else { const mainCat = mainCatMap.get(item.catId.toString()); if (mainCat) mainCatId = mainCat.id; }
+//         const lessonPayload = {
+//           title: item.lessonName,
+//           duration: item.lessonDuration,
+//           youtube_id: item.youTubeId || "",
+//           views: parseInt(item.views) || 0,
+//           AudioDir: (item.mp3Directory || "").replace('/public.php/dav/files/KX3W8YjnDgHpoA9', ''),
+//           AudioFileName: item.mp3FileName,
+//           PdfFileName: item.pdfFileName,
+//           lesson_date_hebrew: hebrewDate,
+//           lesson_date_gregorian: gregorianDate,
+//           publishedAt: new Date(),
+//         };
+//         if (item.rabi) {
+//           const searchName = cleanMatch(item.rabi);
+//           const foundRabbi = allRabbis.find(r => cleanMatch(r.name).includes(searchName) || searchName.includes(cleanMatch(r.name)));
+//           if (foundRabbi) lessonPayload.rabbi = foundRabbi.id;
+//         }
+//         if (mainCatId) lessonPayload.main_category = mainCatId;
+//         if (subCatId) lessonPayload.sub_category = subCatId;
+//         await strapi.entityService.create('api::lesson.lesson', { data: lessonPayload });
+//         insertedCount++;
+//       } catch (err) {
+//         skipped.otherError.push(`${item.lessonName} (ID: ${item.lessonId}): ${err.message}`);
+//       }
+//     }
+//     global._isImporting = false;
+//     console.log(`\nImport done! Inserted: ${insertedCount}`);
+//     console.log(`Skipped (no media): ${skipped.noMedia.length}`);
+//     skipped.noMedia.forEach(s => console.log(`  - ${s}`));
+//     if (skipped.otherError.length > 0) {
+//       console.log(`Errors: ${skipped.otherError.length}`);
+//       skipped.otherError.forEach(s => console.log(`  - ${s}`));
+//     }
+//   } catch (error) {
+//     console.error("Critical error:", error.message);
+//     global._isImporting = false;
 //   }
 // };
