@@ -3,7 +3,6 @@
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
-  'strapi::poweredBy',
   'strapi::query',
   {
     name: 'strapi::body',
