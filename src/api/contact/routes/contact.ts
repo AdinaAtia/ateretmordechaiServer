@@ -12,5 +12,11 @@ export default {
       handler: 'contact.lessonFeedback',
       config: { auth: false },
     },
+    {
+      method: 'POST',
+      path: '/contact/lesson-dedication',
+      handler: 'contact.lessonDedication',
+      config: { auth: false },
+    },
   ],
 };

@@ -94,6 +94,69 @@ export default {
     return ctx.send({ ok: true });
   },
 
+  async lessonDedication(ctx) {
+    const body = ctx.request.body || {};
+
+    // honeypot: שדה נסתר שבני אדם לא ממלאים. בוט שמילא אותו מקבל "הצלחה" בלי שנשלח מייל
+    if (body.website) return ctx.send({ ok: true });
+
+    const lessonTitle = readText(body.lessonTitle, 1, 300);
+    const donorName = readText(body.donorName, 2, 100);
+    const donorContact = readText(body.donorContact, 5, 254);
+    const honoreeName = readText(body.honoreeName, 1, 100);
+    const motherName = body.motherName ? readText(body.motherName, 1, 100) : '';
+    const lessonNumber = body.lessonNumber ? readText(String(body.lessonNumber), 1, 30) : '';
+    const categoryPath = body.categoryPath ? readText(body.categoryPath, 1, 300) : '';
+    const rabbiName = body.rabbiName ? readText(body.rabbiName, 1, 100) : '';
+
+    // ערכים מתוך רשימות סגורות בלבד — כל מה שלא ברשימה נדחה
+    const time = ['1 שבוע', '1 חודש', '4 חודשים', '1 שנה'].includes(body.time) ? body.time : null;
+    const type = ['רפואה שלמה', 'מציאת זיווג', 'פרנסה', 'הצלחה', 'זרע של קיימא - פרי בטן', 'אחר'].includes(body.type) ? body.type : null;
+    const gender = ['בן', 'בת'].includes(body.gender) ? body.gender : null;
+    const date = body.date ? (/^\d{4}-\d{2}-\d{2}$/.test(String(body.date)) ? String(body.date) : null) : '';
+
+    if (!lessonTitle || !donorName || !donorContact || !honoreeName || !time || !type || !gender
+      || motherName === null || lessonNumber === null || categoryPath === null || rabbiName === null || date === null) {
+      return ctx.badRequest('חסרים שדות חובה או שהם לא תקינים');
+    }
+
+    // פרטי קשר: דוא"ל או טלפון (ספרות, רווחים, מקפים, + וסוגריים)
+    const contactOk = EMAIL_RE.test(donorContact) || /^[0-9+\-\s()]{7,20}$/.test(donorContact);
+    if (!contactOk) return ctx.badRequest('פרטי הקשר אינם תקינים');
+
+    const replyTo = EMAIL_RE.test(donorContact) ? donorContact : undefined;
+
+    try {
+      await createTransporter().sendMail({
+        from: `"אתר הישיבה" <${process.env.GMAIL_USER}>`,
+        to: process.env.GMAIL_USER,
+        ...(replyTo ? { replyTo } : {}),
+        subject: `בקשת הקדשת שיעור | ${oneLine(lessonTitle)} | ${oneLine(type)}`,
+        html: `
+          <div dir="rtl">
+            <h2>בקשת הקדשת שיעור</h2>
+            <p><strong>שיעור:</strong> ${escapeHtml(lessonTitle)}</p>
+            ${lessonNumber ? `<p><strong>מספר שיעור:</strong> ${escapeHtml(lessonNumber)}</p>` : ''}
+            ${categoryPath ? `<p><strong>נושא:</strong> ${escapeHtml(categoryPath)}</p>` : ''}
+            ${rabbiName ? `<p><strong>הרב:</strong> ${escapeHtml(rabbiName)}</p>` : ''}
+            <hr/>
+            <p><strong>הקדשה ל:</strong> ${escapeHtml(honoreeName)} (${escapeHtml(gender)}${motherName ? ` ${escapeHtml(motherName)}` : ''})</p>
+            <p><strong>סוג ההקדשה:</strong> ${escapeHtml(type)}</p>
+            <p><strong>זמן הופעה:</strong> ${escapeHtml(time)}</p>
+            <p><strong>תאריך תחילת הצגה:</strong> ${date ? escapeHtml(date) : 'לא צוין'}</p>
+            <hr/>
+            <p><strong>שם המקדיש:</strong> ${escapeHtml(donorName)}</p>
+            <p><strong>פרטי קשר:</strong> ${escapeHtml(donorContact)}</p>
+          </div>
+        `,
+      });
+    } catch (err: any) {
+      strapi.log.error(`contact.lessonDedication: שליחת מייל נכשלה — ${err?.message}`);
+      return ctx.internalServerError('שליחת ההקדשה נכשלה');
+    }
+    return ctx.send({ ok: true });
+  },
+
   async send(ctx) {
     const body = ctx.request.body || {};
 
